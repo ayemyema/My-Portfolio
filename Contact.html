@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="pan.jpg" type="image/png">
+    <script src="https://kit.fontawesome.com/4b4ade4766.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="head">
+            
+            <h1><a href="index.html"><href><i class="fa-solid fa-arrow-left"></i></href>My Socials</a></h1>
+        </div>
+
+        <div class="hamburger">&#9776;</div>
+
+        <div class="navlink">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </nav>
+
+    <section class="social">
+    <h3>Contact Me</h3>
+
+    <p>
+        <strong><i class="fa-brands fa-facebook"></i> Facebook:</strong>
+        <a href="https://www.facebook.com/yourusername" target="_blank">
+            Lourdes Vergara
+        </a>
+    </p>
+
+    <p>
+        <strong><i class="fa-brands fa-instagram"></i> Instagram:</strong>
+        <a href="https://www.instagram.com/ayem_yema/" target="_blank">
+            @ayem_yema
+        </a>
+    </p>
+
+    <p>
+        <strong><i class="fa-solid fa-phone"></i> Phone:</strong>
+        <a href="tel:+639495977057">
+            +63 949 597 7057
+        </a>
+    </p>
+
+    <p>
+        <strong><i class="fa-brands fa-github"></i> GitHub:</strong>
+        <a href="https://github.com/ayemyema" target="_blank">
+            ayemyema
+        </a>
+    </p>
+</section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navlink = document.querySelector(".navlink");
+
+        hamburger.addEventListener("click", () => {
+            navlink.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

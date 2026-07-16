@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="projects.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="pan.jpg" type="image/png">
+    <script src="https://kit.fontawesome.com/4b4ade4766.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="head">
+            
+            <h1><a href="index.html"><href><i class="fa-solid fa-arrow-left"></i></href>My Projects</a></h1>
+        </div>
+
+        <div class="hamburger">&#9776;</div>
+
+        <div class="navlink">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </nav>
+
+    <section class="jody">
+    <h3>Jody SV</h3>
+
+    <a href="https://jodysv.netlify.app/" target="_blank">
+        <img src="svpreview.png" alt="Jody SV Event Stylist Website">
+    </a>
+
+    <p>
+        A portfolio website for Jody SV Event Stylist that showcases their event styling projects and provides visitors with an easy way to view their work and get in touch.
+    </p>
+
+    <a href="https://jodysv.netlify.app/" target="_blank" class="visit-btn">
+        Visit Website
+    </a>
+    </section>
+    
+    <section class="jody">
+    <h3>Queerbook</h3>
+
+    <a href="https://queerbooksuperfinal.vercel.app/" target="_blank">
+        <img src="queerpreview.png" alt="Jody SV Event Stylist Website">
+    </a>
+
+    <p>
+        This was the first static website I created during my work immersion. At the time, I had very little experience with web development and wasn't entirely sure what I was doing, but the project taught me a lot throughout the process. The website features a Facebook-inspired interface combined with an LGBTQ+ theme, making it a creative and meaningful learning experience that helped me build my foundational HTML and CSS skills.
+
+    </p>
+
+    <a href="https://queerbooksuperfinal.vercel.app/" target="_blank" class="visit-btn">
+        Visit Website
+    </a>
+    </section>
+    
+</section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navlink = document.querySelector(".navlink");
+
+        hamburger.addEventListener("click", () => {
+            navlink.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
