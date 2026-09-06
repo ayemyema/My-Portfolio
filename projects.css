@@ -1,135 +1,435 @@
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background-color: #f8f9fa;
+
+    color: #333;
+
     padding-top: 100px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
-/* Navbar */
+
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 80px;
+
     background-color: rgb(153, 194, 255);
+
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     padding: 0 40px;
+
     z-index: 1000;
+
+    transition:
+        background-color 0.3s ease;
 }
+
+
 
 .head h1 a {
     text-decoration: none;
+
     color: rgb(255, 239, 227);
+
+    font-size: 28px;
 }
+
+
 
 .navlink {
     display: flex;
+
+    align-items: center;
+
     gap: 30px;
 }
 
+
 .navlink a {
     text-decoration: none;
+
     color: white;
+
     font-size: 18px;
+
     transition: color 0.3s;
 }
+
 
 .navlink a:hover {
     color: rgb(255, 132, 186);
 }
 
+
+
 .hamburger {
     display: none;
+
+    background: none;
+
+    border: none;
+
     font-size: 30px;
+
     cursor: pointer;
+
     color: rgb(255, 239, 227);
 }
 
-.jody {
-    width: 80%;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    text-align: center;
-}
 
-.jody img {
-    width: 100%;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-.jody h3 {
-    color: rgb(153, 194, 255);
-}
-.jody p {
-    color: rgb(153, 194, 255);
-}
 
-.visit-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: rgb(153, 194, 255);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.theme-button {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    color: #333;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
     transition: 0.3s;
 }
 
-.visit-btn:hover {
-    background: rgb(255, 132, 186);
+
+.theme-button:hover {
+    transform: scale(1.05);
 }
 
+
+/* =========================================
+   PROJECT SECTION
+========================================= */
+
+.jody {
+    width: 80%;
+
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   PROJECT TITLE
+========================================= */
+
+.jody h3 {
+    color: rgb(153, 194, 255);
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.jody img {
+    width: 100%;
+
+    max-width: 750px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    border-radius: 10px;
+
+    border: 5px solid rgb(153, 194, 255);
+
+    transition: 0.3s;
+}
+
+
+.jody img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   PROJECT DESCRIPTION
+========================================= */
+
+.jody p {
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   VISIT BUTTON
+========================================= */
+
+.visit-btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: rgb(153, 194, 255);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.visit-btn:hover {
+    background-color: rgb(255, 132, 186);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode {
+    background-color: #121212;
+
+    color: #f5f5f5;
+}
+
+
+/* Dark navbar */
+
+body.dark-mode .navbar {
+    background-color: #1e293b;
+}
+
+
+/* Dark navigation */
+
+body.dark-mode .navlink a {
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .navlink a:hover {
+    color: rgb(255, 132, 186);
+}
+
+
+/* Dark hamburger */
+
+body.dark-mode .hamburger {
+    color: #f5f5f5;
+}
+
+
+/* Dark project cards */
+
+body.dark-mode .jody {
+    background-color: #1e293b;
+
+    color: #f5f5f5;
+}
+
+
+/* Dark project title */
+
+body.dark-mode .jody h3 {
+    color: #93c5fd;
+}
+
+
+/* Dark project description */
+
+body.dark-mode .jody p {
+    color: #dbeafe;
+}
+
+
+/* Dark theme button */
+
+body.dark-mode .theme-button {
+    background-color: #93c5fd;
+
+    color: #1e293b;
+}
+
+
+/* Dark visit button */
+
+body.dark-mode .visit-btn {
+    background-color: #3b82f6;
+
+    color: white;
+}
+
+
+body.dark-mode .visit-btn:hover {
+    background-color: rgb(255, 132, 186);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 768px) {
+
+
+    /* Navbar */
 
     .navbar {
         padding: 0 20px;
     }
 
+
+    /* Hamburger */
+
     .hamburger {
         display: block;
     }
 
+
+    /* Mobile navigation */
+
     .navlink {
         display: none;
+
         position: absolute;
+
         top: 80px;
+
         left: 0;
+
         width: 100%;
+
         background-color: rgb(153, 194, 255);
+
         flex-direction: column;
+
         align-items: center;
+
         gap: 20px;
+
         padding: 20px 0;
     }
+
+
+    /* Show menu */
 
     .navlink.active {
         display: flex;
     }
 
+
+    /* Dark mobile menu */
+
+    body.dark-mode .navlink {
+        background-color: #1e293b;
+    }
+
+
+    /* Project card */
+
     .jody {
         width: 90%;
+
         padding: 20px;
+
         margin: 30px auto;
     }
+
+
+    /* Project title */
 
     .jody h3 {
         font-size: 28px;
     }
 
+
+    /* Project image */
+
+    .jody img {
+        width: 100%;
+
+        border-width: 3px;
+    }
+
+
+    /* Project description */
+
     .jody p {
         font-size: 16px;
+
+        line-height: 1.7;
     }
+
+
+    /* Theme button */
+
+    .theme-button {
+        margin-top: 5px;
+    }
+
 }
+

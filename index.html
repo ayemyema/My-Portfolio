@@ -1,68 +1,219 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Portfolio</title>
 
     <link rel="stylesheet" href="main.css">
+
     <link rel="icon" href="pan.jpg" type="image/png">
     <link rel="icon" href="favicon.png" type="image/png">
-    <script src="https://kit.fontawesome.com/4b4ade4766.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/4b4ade4766.js"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
+
     <nav class="navbar">
+
         <div class="head">
-            <h1><a href="index.html">My Profile</a></h1>
+            <h1>
+                <a href="index.html">My Profile</a>
+            </h1>
         </div>
 
-        <div class="hamburger">&#9776;</div>
 
-        <div class="navlink">
+        <!-- HAMBURGER -->
+
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="navlink" id="navlink">
+
             <a href="index.html">Home</a>
+
             <a href="Contact.html">Contact</a>
+
             <a href="projects.html">Projects</a>
+
+            <!-- THEME BUTTON -->
+
+            <button id="themeButton" class="theme-button">
+                ☀️ Light Mode
+            </button>
+
         </div>
+
     </nav>
 
+
+    <!-- PROFILE -->
+
     <section class="profile-section">
+
         <div class="profile">
-            <img src="profile.jpg" alt="Photo of Ma. Lourdes S. Vergara">
+
+            <img src="profile.jpg"
+                 alt="Photo of Ma. Lourdes S. Vergara">
+
         </div>
+
 
         <div class="profileinfo">
+
             <h2>Ma. Lourdes S. Vergara</h2>
-            <p>Welcome to my personal portfolio website.</p>
-            <p>I am passionate about learning web development and creating responsive websites.</p>
-        </div>
-    </section>
-    <section>
-        <div class="education">
-            <h2><i class="fa-solid fa-school"></i>Education</h2>
-            <p>JHS - SHS: Tarlac Agricultural University - Laboratory School.</p>
-            <p>Elementary: Camiling Central Elementary School</p>
-        </div>
-    </section>
-    <section>
-         <div class="experience">
-            <h2><i class="fa-solid fa-laptop"></i>Experience</h2>
-            <p>- Completed an 80-hour immersion at the TAU MIS Office, where I developed a static website, assisted with basic networking tasks, and performed computer troubleshooting.</p>
-            <p>- Self-studied HTML and CSS to develop foundational web development skills and recently began learning Java and Python to expand my programming knowledge.
-</p>
+
+            <p>
+                Welcome to my personal portfolio website.
+            </p>
+
+            <p>
+                I am passionate about learning web development
+                and creating responsive websites.
+            </p>
+
         </div>
 
     </section>
+
+
+    <!-- EDUCATION -->
+
+    <section>
+
+        <div class="education">
+
+            <h2>
+                <i class="fa-solid fa-school"></i>
+                Education
+            </h2>
+
+            <p>
+                JHS - SHS: Tarlac Agricultural University -
+                Laboratory School.
+            </p>
+
+            <p>
+                Elementary: Camiling Central Elementary School
+            </p>
+
+            <p>
+                College: Currently taking Bachelor of Science
+                in Computer Science at Tarlac State University.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section>
+
+        <div class="experience">
+
+            <h2>
+                <i class="fa-solid fa-laptop"></i>
+                Experience
+            </h2>
+
+            <p>
+                - Completed an 80-hour immersion at the TAU MIS
+                Office, where I developed a static website,
+                assisted with basic networking tasks, and
+                performed computer troubleshooting.
+            </p>
+
+            <p>
+                - Self-studied HTML and CSS to develop
+                foundational web development skills and recently
+                began learning Java and Python to expand my
+                programming knowledge.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
 
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navlink = document.querySelector(".navlink");
 
-        hamburger.addEventListener("click", () => {
+        /* ==============================
+           HAMBURGER MENU
+        ============================== */
+
+        const hamburger = document.getElementById("hamburger");
+        const navlink = document.getElementById("navlink");
+
+        hamburger.addEventListener("click", function () {
+
             navlink.classList.toggle("active");
+
         });
+
+
+        /* ==============================
+           DARK / LIGHT MODE
+        ============================== */
+
+        const themeButton = document.getElementById("themeButton");
+
+        const savedTheme = localStorage.getItem("theme");
+
+
+        /* DARK MODE IS DEFAULT */
+
+        if (savedTheme === null || savedTheme === "dark") {
+
+            document.body.classList.add("dark-mode");
+
+            themeButton.textContent = "☀️ Light Mode";
+
+            localStorage.setItem("theme", "dark");
+
+        }
+
+
+        /* CHANGE THEME */
+
+        themeButton.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                themeButton.textContent = "☀️ Light Mode";
+
+                localStorage.setItem("theme", "dark");
+
+            } else {
+
+                themeButton.textContent = "🌙 Dark Mode";
+
+                localStorage.setItem("theme", "light");
+
+            }
+
+        });
+
     </script>
 
 </body>
+
 </html>
+

@@ -1,191 +1,521 @@
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background-color: #f8f9fa;
+
+    color: #333;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
+
 
 
 .navbar {
     position: fixed;
+
     top: 0;
+    left: 0;
+
     width: 100%;
     height: 80px;
+
     background-color: rgb(153, 194, 255);
+
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     padding: 0 40px;
+
     z-index: 1000;
+
+    transition: background-color 0.3s ease;
 }
 
 
+/* Website title */
+
 .head h1 a {
     text-decoration: none;
+
     color: rgb(255, 239, 227);
 }
 
 
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
 .navlink {
     display: flex;
+
+    align-items: center;
+
     gap: 30px;
 }
 
+
 .navlink a {
     text-decoration: none;
+
     color: white;
+
     font-size: 18px;
+
     transition: 0.3s;
 }
+
 
 .navlink a:hover {
     color: rgb(255, 132, 186);
 }
 
 
+/* =========================================
+   HAMBURGER
+========================================= */
+
 .hamburger {
     display: none;
+
+    background: none;
+
+    border: none;
+
     font-size: 30px;
+
     cursor: pointer;
+
     color: rgb(255, 239, 227);
 }
 
 
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-button {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    color: #333;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.theme-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
 .profile-section {
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 60px;
+
     padding: 140px 40px 40px;
 }
 
 
 .profile img {
     width: 250px;
+
     height: 300px;
+
     border-radius: 10%;
+
     border: 10px double rgb(153, 194, 255);
+
     object-fit: cover;
 }
 
+
 .profileinfo {
+    width: 100%;
+
     max-width: 500px;
-    max-width: 500px;
+
     background-color: whitesmoke;
+
     padding: 20px;
+
     border-radius: 10px;
+
     color: rgb(164, 87, 28);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
 }
+
 
 .profileinfo h2 {
     color: rgb(153, 194, 255);
+
     font-size: 36px;
+
     margin-bottom: 15px;
 }
+
 
 .profileinfo p {
     font-size: 18px;
+
     line-height: 1.6;
+
     color: rgb(153, 194, 255);
 }
+
+
+/* =========================================
+   EDUCATION
+========================================= */
+
 .education {
     width: 80%;
+
     max-width: 900px;
+
     margin: 60px auto;
+
     padding: 25px;
+
     background-color: whitesmoke;
+
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
 }
+
 
 .education h2 {
     color: rgb(153, 194, 255);
+
     font-size: 36px;
+
     margin-bottom: 15px;
 }
+
 
 .education p {
     color: rgb(153, 194, 255);
+
     font-size: 18px;
+
     line-height: 1.8;
 }
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
 .experience {
     width: 80%;
+
     max-width: 900px;
+
     margin: 60px auto;
+
     padding: 25px;
+
     background-color: whitesmoke;
+
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
 }
+
 
 .experience h2 {
     color: rgb(153, 194, 255);
+
     font-size: 36px;
+
     margin-bottom: 15px;
 }
 
+
 .experience p {
     color: rgb(153, 194, 255);
+
     font-size: 18px;
+
     line-height: 1.8;
 }
 
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode {
+    background-color: #121212;
+
+    color: #f5f5f5;
+}
+
+
+/* Dark navbar */
+
+body.dark-mode .navbar {
+    background-color: #1e293b;
+}
+
+
+/* Dark navigation */
+
+body.dark-mode .navlink a {
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .navlink a:hover {
+    color: rgb(255, 132, 186);
+}
+
+
+/* Dark hamburger */
+
+body.dark-mode .hamburger {
+    color: #f5f5f5;
+}
+
+
+/* Dark profile */
+
+body.dark-mode .profileinfo {
+    background-color: #1e293b;
+
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .profileinfo h2 {
+    color: #93c5fd;
+}
+
+
+body.dark-mode .profileinfo p {
+    color: #dbeafe;
+}
+
+
+/* Dark education */
+
+body.dark-mode .education {
+    background-color: #1e293b;
+}
+
+
+body.dark-mode .education h2 {
+    color: #93c5fd;
+}
+
+
+body.dark-mode .education p {
+    color: #dbeafe;
+}
+
+
+/* Dark experience */
+
+body.dark-mode .experience {
+    background-color: #1e293b;
+}
+
+
+body.dark-mode .experience h2 {
+    color: #93c5fd;
+}
+
+
+body.dark-mode .experience p {
+    color: #dbeafe;
+}
+
+
+/* Dark theme button */
+
+body.dark-mode .theme-button {
+    background-color: #93c5fd;
+
+    color: #1e293b;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 768px) {
+
+    /* Navbar */
+
+    .navbar {
+        height: 80px;
+
+        padding: 0 20px;
+    }
+
+
+    /* Hamburger */
 
     .hamburger {
         display: block;
     }
 
+
+    /* Navigation menu */
+
     .navlink {
         display: none;
+
         position: absolute;
+
         top: 80px;
+
         left: 0;
+
         width: 100%;
+
         background-color: rgb(153, 194, 255);
+
         flex-direction: column;
+
         align-items: center;
+
+        gap: 20px;
+
         padding: 20px 0;
     }
+
+
+    /* Open menu */
 
     .navlink.active {
         display: flex;
     }
 
+
+    /* Dark mobile menu */
+
+    body.dark-mode .navlink {
+        background-color: #1e293b;
+    }
+
+
+    /* Profile */
+
     .profile-section {
         flex-direction: column;
+
         text-align: center;
-        padding-top: 120px;
+
+        padding: 120px 20px 40px;
+
+        gap: 30px;
     }
+
 
     .profile img {
         width: 200px;
+
         height: 240px;
     }
+
 
     .profileinfo h2 {
         font-size: 28px;
     }
 
+
     .profileinfo p {
         font-size: 16px;
     }
+
+
+    /* Education */
+
     .education {
-    width: 90%;
-    margin: 40px auto;
+        width: 90%;
+
+        margin: 40px auto;
     }
+
 
     .education h2 {
         font-size: 28px;
     }
 
+
     .education p {
         font-size: 16px;
+    }
+
+
+    /* Experience */
+
+    .experience {
+        width: 90%;
+
+        margin: 40px auto;
+    }
+
+
+    .experience h2 {
+        font-size: 28px;
+    }
+
+
+    .experience p {
+        font-size: 16px;
+    }
+
+
+    /* Theme button */
+
+    .theme-button {
+        margin-top: 5px;
     }
 }

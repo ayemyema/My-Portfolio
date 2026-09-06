@@ -1,75 +1,289 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
 
-    <link rel="stylesheet" href="projects.css">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="icon" href="pan.jpg" type="image/png">
-    <script src="https://kit.fontawesome.com/4b4ade4766.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <nav class="navbar">
-        <div class="head">
-            
-            <h1><a href="index.html"><href><i class="fa-solid fa-arrow-left"></i></href>My Projects</a></h1>
-        </div>
+    <title>My Projects</title>
 
-        <div class="hamburger">&#9776;</div>
+    <link rel="stylesheet"
+          href="projects.css">
 
-        <div class="navlink">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-            <a href="projects.html">Projects</a>
-        </div>
-    </nav>
+    <link rel="icon"
+          href="favicon.png"
+          type="image/png">
 
-    <section class="jody">
-    <h3>Jody SV</h3>
+    <link rel="icon"
+          href="pan.jpg"
+          type="image/png">
 
-    <a href="https://jodysv.netlify.app/" target="_blank">
-        <img src="svpreview.png" alt="Jody SV Event Stylist Website">
-    </a>
-
-    <p>
-        A portfolio website for Jody SV Event Stylist that showcases their event styling projects and provides visitors with an easy way to view their work and get in touch.
-    </p>
-
-    <a href="https://jodysv.netlify.app/" target="_blank" class="visit-btn">
-        Visit Website
-    </a>
-    </section>
-    
-    <section class="jody">
-    <h3>Queerbook</h3>
-
-    <a href="https://queerbooksuperfinal.vercel.app/" target="_blank">
-        <img src="queerpreview.png" alt="Jody SV Event Stylist Website">
-    </a>
-
-    <p>
-        This was the first static website I created during my work immersion. At the time, I had very little experience with web development and wasn't entirely sure what I was doing, but the project taught me a lot throughout the process. The website features a Facebook-inspired interface combined with an LGBTQ+ theme, making it a creative and meaningful learning experience that helped me build my foundational HTML and CSS skills.
-
-    </p>
-
-    <a href="https://queerbooksuperfinal.vercel.app/" target="_blank" class="visit-btn">
-        Visit Website
-    </a>
-    </section>
-    
-</section>
-
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navlink = document.querySelector(".navlink");
-
-        hamburger.addEventListener("click", () => {
-            navlink.classList.toggle("active");
-        });
+    <script src="https://kit.fontawesome.com/4b4ade4766.js"
+            crossorigin="anonymous">
     </script>
 
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="navbar">
+
+
+        <!-- WEBSITE TITLE -->
+
+        <div class="head">
+
+            <h1>
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    My Projects
+
+                </a>
+
+            </h1>
+
+        </div>
+
+
+        <!-- HAMBURGER -->
+
+        <button class="hamburger"
+                id="hamburger">
+
+            ☰
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="navlink"
+             id="navlink">
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="Contact.html">
+                Contact
+            </a>
+
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <!-- THEME BUTTON -->
+
+            <button id="themeButton"
+                    class="theme-button">
+
+                ☀️ Light Mode
+
+            </button>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =================================
+         JODY SV PROJECT
+    ================================= -->
+
+    <section class="jody">
+
+        <h3>
+            Jody SV
+        </h3>
+
+
+        <a href="https://jodysv.netlify.app/"
+           target="_blank">
+
+            <img src="svpreview.png"
+                 alt="Jody SV Event Stylist Website">
+
+        </a>
+
+
+        <p>
+
+            A portfolio website for Jody SV Event Stylist
+            that showcases their event styling projects and
+            provides visitors with an easy way to view their
+            work and get in touch.
+
+        </p>
+
+
+        <a href="https://jodysv.netlify.app/"
+           target="_blank"
+           class="visit-btn">
+
+            Visit Website
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =================================
+         QUEERBOOK PROJECT
+    ================================= -->
+
+    <section class="jody">
+
+        <h3>
+            Queerbook
+        </h3>
+
+
+        <a href="https://queerbooksuperfinal.vercel.app/"
+           target="_blank">
+
+            <img src="queerpreview.png"
+                 alt="Queerbook Website">
+
+        </a>
+
+
+        <p>
+
+            This was the first static website I created during
+            my work immersion. At the time, I had very little
+            experience with web development and wasn't entirely
+            sure what I was doing, but the project taught me a
+            lot throughout the process. The website features a
+            Facebook-inspired interface combined with an
+            LGBTQ+ theme, making it a creative and meaningful
+            learning experience that helped me build my
+            foundational HTML and CSS skills.
+
+        </p>
+
+
+        <a href="https://queerbooksuperfinal.vercel.app/"
+           target="_blank"
+           class="visit-btn">
+
+            Visit Website
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+
+        /* ==============================
+           HAMBURGER MENU
+        ============================== */
+
+        const hamburger =
+            document.getElementById("hamburger");
+
+
+        const navlink =
+            document.getElementById("navlink");
+
+
+        hamburger.addEventListener("click", function () {
+
+            navlink.classList.toggle("active");
+
+        });
+
+
+
+        /* ==============================
+           DARK / LIGHT MODE
+        ============================== */
+
+        const themeButton =
+            document.getElementById("themeButton");
+
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+
+        /* ==============================
+           DARK MODE IS DEFAULT
+        ============================== */
+
+        if (savedTheme === null || savedTheme === "dark") {
+
+            document.body.classList.add("dark-mode");
+
+            themeButton.textContent =
+                "☀️ Light Mode";
+
+            localStorage.setItem("theme", "dark");
+
+        }
+
+
+
+        /* ==============================
+           CHANGE THEME
+        ============================== */
+
+        themeButton.addEventListener("click", function () {
+
+
+            document.body.classList.toggle("dark-mode");
+
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                themeButton.textContent =
+                    "☀️ Light Mode";
+
+                localStorage.setItem("theme", "dark");
+
+            }
+
+            else {
+
+                themeButton.textContent =
+                    "🌙 Dark Mode";
+
+                localStorage.setItem("theme", "light");
+
+            }
+
+        });
+
+    </script>
+
+
 </body>
+
 </html>
+
