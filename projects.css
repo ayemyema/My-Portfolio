@@ -132,10 +132,14 @@ body {
    PROJECT SECTION
 ========================================= */
 
-.jody {
+.jody,
+.queerbook,
+.portfolio {
     width: 80%;
 
     max-width: 900px;
+
+    min-height: 180px;
 
     margin: 40px auto;
 
@@ -160,7 +164,9 @@ body {
    PROJECT TITLE
 ========================================= */
 
-.jody h3 {
+.jody h3,
+.queerbook h3,
+.portfolio h3 {
     color: rgb(153, 194, 255);
 
     font-size: 36px;
@@ -173,7 +179,9 @@ body {
    PROJECT IMAGE
 ========================================= */
 
-.jody img {
+.jody img,
+.queerbook img,
+.portfolio img {
     width: 100%;
 
     max-width: 750px;
@@ -192,7 +200,9 @@ body {
 }
 
 
-.jody img:hover {
+.jody img:hover,
+.queerbook img:hover,
+.portfolio img:hover {
     transform: scale(1.02);
 }
 
@@ -201,7 +211,9 @@ body {
    PROJECT DESCRIPTION
 ========================================= */
 
-.jody p {
+.jody p,
+.queerbook p,
+.portfolio p {
     color: #555;
 
     font-size: 18px;
@@ -285,7 +297,9 @@ body.dark-mode .hamburger {
 
 /* Dark project cards */
 
-body.dark-mode .jody {
+body.dark-mode .jody,
+body.dark-mode .queerbook,
+body.dark-mode .portfolio {
     background-color: #1e293b;
 
     color: #f5f5f5;
@@ -294,14 +308,18 @@ body.dark-mode .jody {
 
 /* Dark project title */
 
-body.dark-mode .jody h3 {
+body.dark-mode .jody h3,
+body.dark-mode .queerbook h3,
+body.dark-mode .portfolio h3 {
     color: #93c5fd;
 }
 
 
 /* Dark project description */
 
-body.dark-mode .jody p {
+body.dark-mode .jody p,
+body.dark-mode .queerbook p,
+body.dark-mode .portfolio p {
     color: #dbeafe;
 }
 
@@ -391,7 +409,9 @@ body.dark-mode .visit-btn:hover {
 
     /* Project card */
 
-    .jody {
+    .jody,
+    .queerbook,
+    .portfolio {
         width: 90%;
 
         padding: 20px;
@@ -402,14 +422,18 @@ body.dark-mode .visit-btn:hover {
 
     /* Project title */
 
-    .jody h3 {
+    .jody h3,
+    .queerbook h3,
+    .portfolio h3 {
         font-size: 28px;
     }
 
 
     /* Project image */
 
-    .jody img {
+    .jody img,
+    .queerbook img,
+    .portfolio img {
         width: 100%;
 
         border-width: 3px;
@@ -418,7 +442,9 @@ body.dark-mode .visit-btn:hover {
 
     /* Project description */
 
-    .jody p {
+    .jody p,
+    .queerbook p,
+    .portfolio p {
         font-size: 16px;
 
         line-height: 1.7;
